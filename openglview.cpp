@@ -46,7 +46,6 @@ void OpenGLView::drawInput()
              }
             glEnd();
         }
-
     }
 }
 
@@ -94,4 +93,13 @@ void OpenGLView::drawGrid()
         c += COLUMN_WIDTH;
     }
     glEnd();
+}
+
+OpenGLView::~OpenGLView()
+{
+    for(auto set: *sets){
+        delete set;
+    }
+
+    delete sets;
 }

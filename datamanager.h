@@ -17,6 +17,7 @@ public:
     void save(const uint number, QList<Cell> cells);
     bool read(float* weights);
     QHash<uint, QList<Matrix>> *read();
+private:
     QSqlDatabase database;
 
 };

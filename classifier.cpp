@@ -40,7 +40,6 @@ int Classifier::computeMax(double* classes){
 uint Classifier::predict(uint** currentMatrix){
 
     for(int i = 0; i < MAX_CLASSES_COUNT; ++i){
-        qDebug() << i << " d "<<classes[i];
         classes[i] = 0;
     }
     double r = 0.0;
@@ -71,4 +70,14 @@ QStringList Classifier::getWeightsPerClass(){
 void Classifier::train(uint className, QList<Cell> cells)
 {
     (*objects)[className] << collectMatrix(cells);
+}
+
+Classifier::~Classifier()
+{
+    for(auto value: objects->values()){
+        for(auto v: value){
+            delete[] v;
+        }
+    }
+    delete objects;
 }

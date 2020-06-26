@@ -36,6 +36,6 @@ void MainController::train(uint className, QSet<Point>* points){
 MainController::~MainController()
 {
     delete dataManager;
-    delete view;
+//    delete view;
     delete classifier;
 }

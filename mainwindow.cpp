@@ -53,5 +53,6 @@ void MainWindow::showWeights(QStringList& weights)
 MainWindow::~MainWindow()
 {
     delete ui;
+    delete controller;
 }
 

@@ -5,7 +5,6 @@
 #include "utils.h"
 
 
-
 DataManager::DataManager()
 {
     auto dirPath = QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation);
@@ -83,7 +82,6 @@ QHash<uint, QList<Matrix>>* DataManager::read()
             objects[cell.objectId] = cells;
             cells << cell;
         }
-//        qDebug() << cell.objectId;
     }
     QHash<uint, QList<Matrix>>* data = new QHash<uint, QList<uint**>>;
     QHash<uint, Object>::iterator it = objects.begin();

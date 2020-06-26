@@ -9,6 +9,7 @@ class OpenGLView : public QOpenGLWidget, protected QOpenGLFunctions
 {
 public:
     OpenGLView(QWidget *parent);
+    ~OpenGLView();
 
     void clear();
 
