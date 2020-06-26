@@ -12,6 +12,8 @@ MainController::MainController(View *view, DataManager *dataManager, Classifier 
 
 void MainController::predict(QSet<Point>* points)
 {
+    if(points->size() == 0)
+        return;
     auto cells = convertPointsToCells(points);
     auto currentMatrix = collectMatrix(cells);
 
@@ -24,6 +26,8 @@ void MainController::predict(QSet<Point>* points)
 
 
 void MainController::train(uint className, QSet<Point>* points){
+    if(points->size() == 0)
+        return;
     QList<Cell> cells = convertPointsToCells(points);
     dataManager->save(className, cells);
     classifier->train(className, cells);
