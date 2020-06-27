@@ -60,6 +60,8 @@ static uint** collectMatrix(QList<Cell> &cells){
     }
 
     for(auto c: cells){
+        if(c.x > COLUMN_COUNT || c.y > COLUMN_COUNT)
+            continue;
         matrix[c.x][c.y] = 1;
     }
     return matrix;

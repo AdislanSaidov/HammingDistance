@@ -1,7 +1,5 @@
 #pragma once
 
-#include "dbhelper.h"
-
 #include <QMainWindow>
 #include "view.h"
 #include "maincontroller.h"
