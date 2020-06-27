@@ -88,11 +88,11 @@ QHash<uint, QList<Matrix>>* DataManager::read()
     while (it != objects.end()) {
         int className = it.value()[0].number;
         if(data->contains(className)){
-            (*data)[className] << collectMatrix(it.value());
+            (*data)[className] << utils::collectMatrix(it.value());
         }else{
             QList<uint**> objectItems;
             (*data)[className] = objectItems;
-            objectItems << collectMatrix(it.value());
+            objectItems << utils::collectMatrix(it.value());
         }
         ++it;
     }

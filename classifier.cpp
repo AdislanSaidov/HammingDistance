@@ -69,7 +69,7 @@ QStringList Classifier::getWeightsPerClass(){
 
 void Classifier::train(uint className, QList<Cell> cells)
 {
-    (*objects)[className] << collectMatrix(cells);
+    (*objects)[className] << utils::collectMatrix(cells);
 }
 
 Classifier::~Classifier()

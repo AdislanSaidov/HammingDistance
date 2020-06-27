@@ -20,7 +20,8 @@ SOURCES += \
     main.cpp \
     maincontroller.cpp \
     mainwindow.cpp \
-    openglview.cpp
+    openglview.cpp \
+    utils.cpp
 
 HEADERS += \
     models/cell.h \
